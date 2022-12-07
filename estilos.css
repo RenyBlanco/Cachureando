@@ -1,11 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* HEADER */
+.cabeza {
+    width: 100%;
+    height: 140px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.menu {
+    background-color: darkslategrey;
+    width: 100%;
+    height: 50px;
+    display: grid;
+}
+
+.opciones {
+    width: 550px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-self: end;
+    margin-right: 50px;
+}
+
+.opciones a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.opciones a:hover {
+    color: rgb(18, 125, 224);
+}
+
+.opciones a:active {
+    color: rgb(52, 5, 129);
+}
+
+ul.horizontal {
+    margin: 0;
+    padding: 0;
+}
+
+ul.horizontal li {
+    display: block;
+    float: left;
+    padding: 0 10px;
+}
+
+/*** Encabeza ***/
+.encabeza {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.encabeza h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    color: darkslategrey;
+}
+
+/* Contenedor Principal */
 body {
-    font-family: "Roboto Mono", sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 400;
 }
 
@@ -17,48 +83,155 @@ body {
     left: 0;
 }
 
-/* HEADER */
-.cabeza {
-    width: 100%;
-    height: 140px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-
-.social {
-    background-color: darkslategrey;
-    width: 100%;
-    height: 50px;
-    display: grid;
-}
-ul.horizontal {
-    margin: 0;
-    padding: 0;
-}
-
-ul.horizontal li {
-    display: block;
-    float: left;
-    padding: 0 10px;
-}
-img{
+.libro {
     width: 180px;
-    height: 210px;
+    height: 560px;
 }
-#inicio {
-    display: block;
-    padding: 0 10px;
+
+/* main */
+
+.inicio-principal {
+    display: grid;
 }
-#nosotros {
-    display: block;
-    padding: 0 10px;
+
+.sec_inicio {
+    background-color: antiquewhite;
+    padding: 10px 80px 40px;
 }
-#libros{
-    display: block;
-    padding: 0 10px;
+
+.contenedor-inicio {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr;
 }
+
+.contenedor-inicio img {
+    grid-column: 1;
+    width: 85%;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.info-inicio {
+    grid-column: 2;
+}
+
+.info-inicio h2 {
+    margin-top: 20px;
+}
+
+.info-inicio p {
+    margin: 30px 0;
+}
+
+.btn-buy {
+    text-decoration: none;
+    color: #f50a0a;
+    border: 2px solid rgb(241, 40, 40);
+    border-radius: 25%;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+.btn-buy:hover {
+    text-decoration: none;
+    color: #050505;
+    border: 2px solid rgb(236, 11, 11);
+    border-radius: 25%;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+/* Nosotros */
+.perfil {
+    padding: 70px 100px;
+    background-color: beige;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.perfil img {
+    width: 320px;
+    margin-right: 30px;
+}
+
+
+/* Libros */
+.libros {
+    padding: 0 80px 40px;
+}
+
+.libros h3 {
+    border-bottom: 1px solid grey;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.libros-blog {
+    display: inline-block;
+    padding: 15px;
+    max-width: 32%;
+    margin-bottom: 50px;
+}
+
+.libros-blog img {
+    width: 100%;
+}
+
+.libros-blog h4 {
+    margin: 20px 0;
+}
+
+.libros-blog p {
+    margin-bottom: 35px;
+}
+
 footer {
-    padding: 1px;
+    width: 100%;
+    height: 80px;
+    background-color: #2f4f4f;
+    border-top: 35px solid rgb(241, 40, 40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
     color: aliceblue;
-    background-color: black;
+}
+
+/* Contacto */
+.contacto {
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px 50px;
+}
+
+.seccion-contacto {
+    display: flex;
+    margin: 20px 0 20px 20px;
+}
+
+.seccion-contacto img {
+    width: 100px;
+    display: inline-block;
+    padding: 10px;
+}
+
+.contacto-info {
+    padding: 20px 0;
+    width: 300px;
+}
+
+.contacto-info a {
+    text-decoration: none;
+    color: #050505;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.contacto-info p {
+    margin-top: 10px;
 }
